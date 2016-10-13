@@ -6,10 +6,6 @@ import sys
 
 print "############ Beginning Project #################"
 
-hashList = []
-
-# { hash, input }
-hashDictionary = {}
 
 logFile = ""
 
@@ -31,39 +27,6 @@ def generateRandomString(head):
 	tailSize = random.randint(25,75)
 	return head + tailGenerator(size = tailSize)
 
-def insertIntoList(element):
-	global hashList
-	if(len(hashList) == 0):
-		hashList.append(element)
-		return 0
-	else:
-		index = 0
-		while(index < len(hashList)):
-			if(element < hashList[index]):
-				hashList.insert(index, element)
-				return index
-			index += 1
-		hashList.append(element)
-		return index
-
-def findLargestPrefix(element, index):
-	global hashList
-	best = 0
-	match = element
-	if(index > 0):
-		previous = hashList[index -1]
-		length1 = len(commonprefix([previous, element]))
-		if(length1 > best and element != previous): 
-			best = length1
-			match = previous
-	if(index < len(hashList) -1):
-		forwards = hashList[index +1]
-		length2 = len(commonprefix([element, forwards]))
-		if(length2 > best and element != forwards): 
-			best = length2
-			match = forwards
-	return match, best
-
 
 def updateLogFile():
 	global win
@@ -79,24 +42,28 @@ def updateLogFile():
 		file.write("\n  prefix length: " + str(win.length) + "  or  " + str(win.bitLength) + "  bits\n\n")
 		file.close()
 
-def winnerFound(hString1, hString2, prefixSize):
+def winnerFound(hString1, str1,  hString2, str2, prefixSize):
 	global hashDictionary
 	global win
 	if(prefixSize > win.length):
 		win.hashStr1 = hString1
-		win.str1 = hashDictionary[hString1]
+		win.str1 = str1
 		win.hashStr2 = hString2
-		win.str2 = hashDictionary[hString2]
+		win.str2 = str2
 		win.length = prefixSize
 		win.bitLength = prefixSize * 4
 		updateLogFile()
 
+def getHash(inputString):
+	s = sha3.SHA3224() 
+	s.update(inputString)
+	return s.hexdigest()
 
+def getNextHare(inputString):
+	return get
 
 
 def main():
-	global hashList
-	global hashDictionary
 	global win
 	global logFile
 	print "beginning search..."
@@ -106,26 +73,48 @@ def main():
 		print "bad log file"
 		return
 
-		
-	counter =0
+	base = "112932095"
+	primer = generateRandomString(base)
+	print primer
+
+	tortoise = getHash(primer)
+	tortoiseString = primer
+
+	hare1 = getHash(base + getHash(primer))
+	hare1String = base + getHash(primer)
+
+	hare2 = getHash(base + getHash(base + getHash(primer)))
+	hare2String = base + getHash(base + getHash(primer))
+
 	while True:
-		counter+=1
-		inputString = generateRandomString("112932095") # get input string
-		s = sha3.SHA3224() # create hash object
-		s.update(inputString) 
-		hashString = s.hexdigest() # get hash string
+		prefix1 = len(commonprefix([ tortoise, hare1]))
+		if(prefix1 > win.length):
+			winnerFound(tortoise, tortoiseString, hare1, hare1String, prefix2)
 
-		# update the hash dictionary
-		hashDictionary[hashString] = inputString
+		prefix2 = len(commonprefix([ tortoise, hare2]))
+		if(prefix2 > win.length):
+			winnerFound(tortoise, tortoiseString, hare2, hare1String, prefix2)
 
-		#insert into list
-		index = insertIntoList(hashString)
+		#move tortoise one step
+		tortoiseString = base + tortoise
+		tortoise = getHash(base + tortoise)
 
-		#find its largest prefix
-		match, prefixSize = findLargestPrefix(hashString, index)
+		#move each hare two steps
+		hare1String = base + getHash(base + hare1)
+		hare1 = getHash(base + getHash(base + hare1))
 
-		if(prefixSize > win.length and match != hashString):
-			winnerFound(hashString, match, prefixSize)
+		hare2String = base + getHash(base + hare2)
+		hare2 = getHash(base + getHash(base + hare2))
+
+
+
+
+
+
+
+
+
+
 
 
 
