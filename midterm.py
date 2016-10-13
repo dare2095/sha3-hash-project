@@ -2,7 +2,7 @@ import sha3
 from os.path import commonprefix
 import string
 import random
-
+import sys
 
 print "############ Beginning Project #################"
 
@@ -102,9 +102,11 @@ def main():
 	print "beginning search..."
 
 	logFile = sys.argv[1]
-	if(logFile == "")
+	if(logFile == ""):
 		print "bad log file"
 		return
+
+		
 	counter =0
 	while True:
 		counter+=1

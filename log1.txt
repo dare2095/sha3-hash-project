@@ -26,3 +26,52 @@
 112932095cqWFUkZZaGju2cT9n9zb0nxjbVXzo0Asq   <==>  698fd56d234c5c27cff207348e2a61f96f5768e1735852cadb7d4929
   prefix length: 4  or  16  bits
 
+
+########### NEW WINNER FOUND #############
+
+112932095YTR5GQsCkDCyKwp9nffG4Ox0gSeHfdH4jhVPyomjSQqQFTRCIqpn31k   <==>  9b27ecf1fa6096efcefcd0ecda8ff8b61eef985e360d373aa6eebf28
+112932095eH77U08Hn6UDUIHnILRQ0wIwOsUc3tfpUDaafQB8NsbhZ0AnlULUQSuKkzBHEBHZoT8   <==>  9046bdbf55162327adbb7eee6e2e521a5e96f0e734a2f26176db2fc4
+  prefix length: 1  or  4  bits
+
+
+########### NEW WINNER FOUND #############
+
+112932095nWBjAe1sHVZkJuLDGEhyiegsn0XjVjiUrIQRRlb9BBoj3oPXzx3IkV31vrXIg   <==>  1924d4ddc155b69afe72a4ea1aca335de00826165dbe6f5e8fcd0d9d
+112932095XMY9CXcE3omuHeOTlHcqOeiU5S92GSMdKESa03ssN6INM3QFWeYTwf0w08OCu1JB   <==>  190c75f6ecf0b117f18fd63f2845e2205d8f6eaba552dbde5d77bbe4
+  prefix length: 2  or  8  bits
+
+
+########### NEW WINNER FOUND #############
+
+112932095YFwOBben7lWBRWJjMdaaK1f1FMsl51mofoIk12DWPKGPlVb5ceXQNC0CNzuHqtoLvR   <==>  ec292ba719aa51497bde7216c9ae612ec88823ce0142f82747c5d1a7
+112932095O2ICwCCuj7NXoUIaD5Iuqi3mN3N9B4idFRULMDxzwLbfzMANGei4   <==>  ec26d90ad6e86d1f2129eee4e9d2dafa2b9e6d76c10a5da2b24eff00
+  prefix length: 3  or  12  bits
+
+
+########### NEW WINNER FOUND #############
+
+112932095CGk0jBh1sYjU2stguCpsl5VQWWmExlxgQ9oZ8adEqfnuvfvglZXzUbM   <==>  774901c85147c4075bc34599b7f7335e31bf03cfc226aba18c13b6a8
+112932095bR6pUQhwXWYLOxruwV6fbIzUKfXN31i6   <==>  77495cc655003ebcbd90e7707ced0fc196330a1499824611e6a1c73b
+  prefix length: 4  or  16  bits
+
+
+########### NEW WINNER FOUND #############
+
+112932095cF2Ar49gtMVlTFZz3SlYTijfSCLQoYxSaJcxtXQSqx   <==>  58c6fe84bcbadfe8a42897eb05f948f1066a89e657ff6fbaaab7e96f
+112932095dPlGtf9r2IlfI9PTPxV0DBhRoGxga   <==>  58c6ffd5479197bff776a83b61544c511fd95b497932217c58b94c01
+  prefix length: 5  or  20  bits
+
+
+########### NEW WINNER FOUND #############
+
+1129320952Uu3Q95TwECbGGJnt8U09yrv2wWuR080HL   <==>  9a06eedb3d88a7311ef0b97e4c744c3af2318658f3de3c1a7397d5f7
+112932095uCR4QiKl70YpBNhSniK1G71T8T5A2O0Nte4S   <==>  9a06eeedc5bbe038dc4329606b45cf113ecd686899436ac9ee4fe0b3
+  prefix length: 6  or  24  bits
+
+
+########### NEW WINNER FOUND #############
+
+112932095w23VKXFpEVRcn5ZIgjQJnlR2aKtLpuAuOVwob6CuYNgdatFFNSEefT0xRwP37PvFOfhWUHB   <==>  e561ed8e6ca3f6bcff054477f235dbcf6f93185a24d33a7558b3aca6
+112932095czACk5r1dMAGiN794b0Qt2br0TI97pSIVy64GXjlyenf8w9yYI6Yr27   <==>  e561ed8b0ed827b2cf8ce14ff9b067caeb68ae904ab33b847e00ac92
+  prefix length: 7  or  28  bits
+
