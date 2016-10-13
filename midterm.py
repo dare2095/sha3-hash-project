@@ -11,7 +11,7 @@ hashList = []
 # { hash, input }
 hashDictionary = {}
 
-
+logFile = ""
 
 class Winner:
 	str1 = ""
@@ -67,11 +67,12 @@ def findLargestPrefix(element, index):
 
 def updateLogFile():
 	global win
+	global logFile
 	print ("\n########### NEW WINNER FOUND #############\n")
 	print ("\n" + win.str1 + "   <==>  " + win.hashStr1)
 	print ("\n" + win.str2 + "   <==>  " + win.hashStr2)
 	print ("\n  prefix length: " + str(win.length) + "  or  " + str(win.bitLength) + "  bits \n\n")
-	with open("log.txt", "a") as file:
+	with open(logFile, "a") as file:
 		file.write("\n########### NEW WINNER FOUND #############\n")
 		file.write("\n" + win.str1 + "   <==>  " + win.hashStr1)
 		file.write("\n" + win.str2 + "   <==>  " + win.hashStr2)
@@ -97,8 +98,13 @@ def main():
 	global hashList
 	global hashDictionary
 	global win
+	global logFile
 	print "beginning search..."
 
+	logFile = sys.argv[1]
+	if(logFile == "")
+		print "bad log file"
+		return
 	counter =0
 	while True:
 		counter+=1
