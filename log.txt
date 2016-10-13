@@ -1,0 +1,28 @@
+
+########### NEW WINNER FOUND #############
+
+112932095r8R8AgR10u5i01734cuzA6nNasdtc83vcUTX7H4rpyaQRuLHpxx8byuggFJ3IBL7GJvkh   <==>  8c31c7896f1fdb5f1afb105a22133dfb588ed3f9648b7f52e8deb50f
+112932095j0JiKg8cgcliuIcWong8yCJPfBAAIKfSZOVoz33xdUwugmw5XEKqdQGbCciOIXjBwo7w8Fz7n   <==>  89d0a0ea199e4b96d6916e4128c5f409a749e83b8edb02143e495045
+  prefix length: 1  or  4  bits
+
+
+########### NEW WINNER FOUND #############
+
+112932095M7dkAJo4zj3Wd2merE7F09Ev8gsLCVh   <==>  8c5109157645f8e260d47b91b64b1464b38768abe750e6b84413cf50
+112932095r8R8AgR10u5i01734cuzA6nNasdtc83vcUTX7H4rpyaQRuLHpxx8byuggFJ3IBL7GJvkh   <==>  8c31c7896f1fdb5f1afb105a22133dfb588ed3f9648b7f52e8deb50f
+  prefix length: 2  or  8  bits
+
+
+########### NEW WINNER FOUND #############
+
+112932095dwUCkMZFiWIuK5Ppv9Z659py1WccC19O2fsKCUhBoixeg6K8P8Dcn   <==>  fc1f29d023165c027b8f2f00289c23a0ec46024afeedd72e4c5306fc
+112932095M3nUggbMe6BePeyyiQxO9dOKPWltyM6gjHqUC0pgWOIgQShWTm6Fq975KZpHe4KO8rBpaB   <==>  fc1d7e6687f07a59a4806dfe2c997d8d2aeb808520fc911feff17305
+  prefix length: 3  or  12  bits
+
+
+########### NEW WINNER FOUND #############
+
+112932095FdTP9Fl8Am1C858QXgAh96r5rIKg1ETg0nhIGJWk   <==>  698f2c01d71bc7f772aa397681f1ba6669fedc639b5541cd67e5aac2
+112932095cqWFUkZZaGju2cT9n9zb0nxjbVXzo0Asq   <==>  698fd56d234c5c27cff207348e2a61f96f5768e1735852cadb7d4929
+  prefix length: 4  or  16  bits
+
