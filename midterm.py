@@ -24,8 +24,7 @@ def tailGenerator(size=50, chars=string.letters + string.digits):
 	return ''.join(random.choice(chars) for _ in range(size))
 
 def generateRandomString(head):
-	tailSize = random.randint(25,75)
-	return head + tailGenerator(size = tailSize)
+	return head + tailGenerator(size = 10)
 
 
 def updateLogFile():
@@ -86,14 +85,16 @@ def main():
 	hare2 = getHash(base + getHash(base + getHash(primer)))
 	hare2String = base + getHash(base + getHash(primer))
 
+
 	while True:
+
 		prefix1 = len(commonprefix([ tortoise, hare1]))
 		if(prefix1 > win.length):
-			winnerFound(tortoise, tortoiseString, hare1, hare1String, prefix2)
+			winnerFound(tortoise, tortoiseString, hare1, hare1String, prefix1)
 
 		prefix2 = len(commonprefix([ tortoise, hare2]))
 		if(prefix2 > win.length):
-			winnerFound(tortoise, tortoiseString, hare2, hare1String, prefix2)
+			winnerFound(tortoise, tortoiseString, hare2, hare2String, prefix2)
 
 		#move tortoise one step
 		tortoiseString = base + tortoise
