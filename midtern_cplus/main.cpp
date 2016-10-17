@@ -123,6 +123,6 @@ int main(int argc, const char * argv[]) {
     
     cout << "should be 8 :" << findPrefixLength(h1, h2) << endl;
      */
-    pollardRho("log.txt");
+    pollardRho(argv[1]);
     return 0;
 }
