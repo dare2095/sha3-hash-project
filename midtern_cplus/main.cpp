@@ -49,14 +49,15 @@ void winnerFound(Winner win){
     
 }
 
-void pollardRho(string logFile){
+void pollardRho(string logFile, string primer){
     string base = "112932095";
-    string primer = "112932095abcdef";
     SHA3   sha3  (SHA3  ::Bits224);
     
+    cout << "starting with " << base + primer << endl;
+    
     //tortoise
-    string tortoise = primer;
-    string tortoiseHash = sha3(primer);
+    string tortoise = base + primer;
+    string tortoiseHash = sha3(tortoise);
     
     //hares
     string hare1 = base + tortoiseHash;
@@ -94,10 +95,10 @@ void pollardRho(string logFile){
         tortoise = base + tortoiseHash;
         tortoiseHash = sha3(tortoise);
         
-        hare1 = base + hare1Hash;
+        hare1 = base + sha3(base + hare1Hash);
         hare1Hash = sha3(hare1);
         
-        hare2 = base + hare2Hash;
+        hare2 = base + sha3(base + hare2Hash);
         hare2Hash = sha3(hare2);
         
     }
@@ -123,6 +124,6 @@ int main(int argc, const char * argv[]) {
     
     cout << "should be 8 :" << findPrefixLength(h1, h2) << endl;
      */
-    pollardRho(argv[1]);
+    pollardRho(argv[1], argv[2]);
     return 0;
 }
