@@ -126,8 +126,8 @@ void BrentsAlgorithm(string logFile, string primer){
     win.logFile = logFile;
     int prefix = 0;
 
-    int stepCounter = 0;
-    int loopSize = 2;
+    long stepCounter = 0;
+    long loopSize = 2;
     while(true){
         prefix =findPrefixLength(tortoiseHash, hareHash);
         if(prefix > win.prefix && tortoise != hare){
