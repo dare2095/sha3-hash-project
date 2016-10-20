@@ -106,6 +106,60 @@ void pollardRho(string logFile, string primer){
     
 }
 
+
+void BrentsAlgorithm(string logFile, string primer){
+    string base = "112932095";
+    SHA3   sha3  (SHA3  ::Bits224);
+    
+    cout << "starting with " << base + primer << endl;
+    
+    //tortoise
+    string tortoise = base + primer;
+    string tortoiseHash = sha3(tortoise);
+    
+    //hares
+    string hare = base + tortoiseHash;
+    string hareHash = sha3(hare);
+    
+    
+    Winner win;
+    win.logFile = logFile;
+    int prefix = 0;
+
+    int stepCounter = 0;
+    int loopSize = 2;
+    while(true){
+        prefix =findPrefixLength(tortoiseHash, hareHash);
+        if(prefix > win.prefix && tortoise != hare){
+            win.prefix = prefix;
+            win.str1 = tortoise;
+            win.str1Hash = tortoiseHash;
+            win.str2 = hare;
+            win.str2Hash = hareHash;
+            winnerFound(win);
+        }
+        
+        
+        if(stepCounter == loopSize){
+            tortoise = hare;
+            tortoiseHash = hareHash;
+            loopSize *= 2;
+            stepCounter = 0;
+            cout << "loop size now : " << loopSize << endl;
+        }
+        stepCounter++;
+        hare = base + hareHash;
+        hareHash = sha3(hare);
+        
+
+        
+    }
+    
+    
+    
+}
+
+
 int main(int argc, const char * argv[]) {
     // insert code here...
     /*
@@ -124,6 +178,7 @@ int main(int argc, const char * argv[]) {
     
     cout << "should be 8 :" << findPrefixLength(h1, h2) << endl;
      */
-    pollardRho(argv[1], argv[2]);
+    //pollardRho(argv[1], argv[2]);
+    BrentsAlgorithm(argv[1], argv[2]);
     return 0;
 }
